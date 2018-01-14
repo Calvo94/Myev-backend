@@ -1,10 +1,10 @@
 import Ev from './model';
 
 export const createEv = async (req, res) => {
-  const { title, description, eventDate } = req.body;
+  const { title, description, eventDate, imgbase64 } = req.body;
   console.log(description);
   const date = new Date(eventDate);
-  const newEv = new Ev({ title, description, eventDate:date });
+  const newEv = new Ev({ title, description, eventDate:date, imgbase64 });
 
   try {
     return res.status(201).json({ ev: await newEv.save() });
