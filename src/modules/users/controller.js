@@ -15,7 +15,6 @@ export const loginWithAuth0 = async (req, res) => {
    } else {
      userInfo = await facebookAuth(req.body.token);
    }
-  try {
     const user = await User.create(args);
 
     return res.status(200).json({
