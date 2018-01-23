@@ -2,7 +2,7 @@ import mongoose, { Schema } from 'mongoose';
 
 const EvSchema = new Schema({
   title: {
-    type: String,
+     [type: String,
     required: true,
     minLength: [5, '5 characters long at least'],
   },

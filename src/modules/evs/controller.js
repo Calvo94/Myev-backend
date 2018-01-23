@@ -2,7 +2,6 @@ import Ev from './model';
 
 export const createEv = async (req, res) => {
   const { title, description, eventDate, imgbase64 } = req.body;
-  console.log(description);
   const date = new Date(eventDate);
   const newEv = new Ev({ title, description, eventDate:date, imgbase64 });
 
@@ -65,9 +64,7 @@ try {
 
 
 export const deleteEv = async (req, res) => {
-
   const { evId } = req.params;
-
   try {
     return res.status(201).json({ ev: await  Ev.remove({_id:evId}) });
   } catch (e) {
