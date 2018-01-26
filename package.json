@@ -11,12 +11,13 @@
     "lint:fix": "eslint --fix src"
   },
   "engines": {
-    "node": "9.3.0"
+    "node": "9.4.0"
   },
   "repository": {},
   "author": "Said Mançouri",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.17.1",
     "babel-cli": "^6.26.0",
     "body-parser": "^1.16.0",
     "busboy-body-parser": "^0.3.1",
@@ -30,8 +31,8 @@
   "devDependencies": {
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "eslint": "^3.19.0",
-    "eslint-config-equimper": "^1.6.2",
+    "eslint": "^4.16.0",
+    "eslint-config-equimper": "^2.2.1",
     "nodemon": "^1.11.0",
     "rimraf": "^2.6.1"
   }
