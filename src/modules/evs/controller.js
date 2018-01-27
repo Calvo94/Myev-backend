@@ -90,7 +90,7 @@ export const getUnverifiedEvs = async (req, res) => {
 };
 export const getVerifiedEvs = async (req, res) => {
   try {
-    return res.status(200).json({ evs: await Ev.find({verified:true }).sort({createdAt: -1}) });
+    return res.status(200).json({ evs: await Ev.find({verified:true, eventDate: {$gt: Date.now()} }).sort({eventDate: 1}) });
   } catch (e) {
     return res.status(e.status).json({ error: true, message: 'Error with Ev' });
   }

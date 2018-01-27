@@ -18,9 +18,20 @@ const EvSchema = new Schema({
     type: String,
     default:""
   },
+  user: {
+    type: String
+  },
   group: {
     type: Schema.Types.ObjectId,
     ref: 'Group',
+  },
+  status: {
+    type: String,
+    default: 'En cours'
+  },
+  lieu:{
+    type: String,
+    default: 'ENSAM'
   },
   note: {
     type: Number,
