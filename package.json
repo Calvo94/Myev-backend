@@ -6,6 +6,7 @@
     "start": "node dist/index.js",
     "dev": "set NODE_ENV=development & nodemon dist/index.js",
     "build:watch": "babel -w --out-dir=dist ./src",
+    "build": "babel --out-dir=dist ./src",
     "clean": "rimraf dist",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src"
